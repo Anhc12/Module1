@@ -30,3 +30,6 @@ td{
 .hover{
     background: red;
 }
+input{
+    margin-bottom: 10px;
+}
