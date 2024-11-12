@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    background-color: aqua;
+    padding: 20px;
+
+}
+form{
+    background-color: #ffffff;
+    padding: 20px 10px;
+    text-align: left;
+}
+.form-name{
+    width: 100%;
+    text-align: center;
+    background-color: #ff4500;
+
+}
+.input-group{
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.buttons{
+margin-top: 10px;
+}
