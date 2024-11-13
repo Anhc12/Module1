@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0ffff;
+}
+.form-container {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffcc;
+    border: 1px solid #ccc;
+}
+.form-header {
+    color: #0000ff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+label {
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+    margin-bottom: 5px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+input[type="text"], input[type="email"], select, textarea {
+    width: calc(100% - 90px);
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+textarea {
+    height: 60px;
+    resize: none;
+}
+.radio-group {
+    display: inline-block;
+    margin-right: 10px;
+}
+.buttons {
+    text-align: center;
+    margin-top: 15px;
+}
+.buttons button {
+    padding: 5px 15px;
+    margin: 5px;
+    background-color: #dcdcdc;
+    border: 1px solid #000;
+    cursor: pointer;
+}
