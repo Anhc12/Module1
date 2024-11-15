@@ -1,0 +1,16 @@
+.chess-board {
+    border-collapse: collapse;
+    border: 5px solid #f2a200;
+    background-color: #f2a200;
+}
+tbody td{
+    width: 80px;
+    height: 80px;
+}
+.chess-board .white {
+    background-color: white;
+}
+
+.chess-board .black {
+    background-color: black;
+}
