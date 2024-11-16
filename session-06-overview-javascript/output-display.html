@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>output display</title>
+</head>
+<body>
+<button type="button" onclick="showMessage();">Click me!</button>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage1();">Click Me!</button>
+<br>
+<button type="button" onclick="showMessage2();">Click Me!</button>
+<script>
+  function showMessage() {
+    alert("xin chao");
+  }
+
+ document.getElementById("messageDiv").innerHTML = "hello world";
+  function showMessage1(){
+    document.write('Xin chào!');}
+  function showMessage2(){
+    console.log('Xin chào!');
+  }
+</script>
+</body>
+</html>
