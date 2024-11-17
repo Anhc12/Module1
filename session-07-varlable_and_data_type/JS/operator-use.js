@@ -1,10 +1,5 @@
-let inputWidth;
-let inputHeight;
+let width = parseInt(prompt("Nhập width"));
+let height = parseInt(prompt("Nhập height"));
+let area = width * height;
 
-inputWidth = prompt("Nhập width");
-inputHeight = prompt("Nhập height");
-
-let width =parseInt(inputWidth);
-let height =parseInt(inputHeight);
-let area = width*height;
 document.write("The area is " + area);
