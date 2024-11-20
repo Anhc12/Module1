@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summing</title>
+</head>
+<body>
+<script>
+  // Nhập một số bất kỳ lớn hơn 0
+  let number = parseInt(prompt("Nhập vào một số lớn hơn 0:"));
+
+  // Kiểm tra điều kiện nhập
+  if (number > 0) {
+    // Tính tổng các phần tử từ 1 đến số vừa nhập
+    let total = 0;
+    for (let i = 1; i <= number; i++) {
+      total += i;
+    }
+    alert(`Tổng các số từ 1 đến ${number} là: ${total}`);
+  } else {
+    alert("Vui lòng nhập một số lớn hơn 0.");
+  }
+
+</script>
+
+</body>
+</html>
