@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <td><label for="">Amount</label><br>
+                <input id="amount" name="" type="text">
+            </td>
+            <td><label for="">Form Currency</label><br>
+                <select id="form" name="">
+                    <option>VietNam</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td><label for="">To Currency</label><br>
+                <select id="to" name="">
+                    <option>USD</option>
+                    <option>VietNam</option>
+                </select></td>
+            <td>
+                <button onclick="convertCurrency()" type="button">Convert</button>
+            </td>
+        </tr>
+    </table>
+
+</form>
+<script>
+    function convertCurrency() {
+        const amount = parseFloat(document.getElementById("amount").value);
+        const form = document.getElementById("form").value;
+        const to = document.getElementById("to").value;
+
+        console.log(amount);
+        console.log(form);
+        console.log(to);
+        const exchangeRate = 25234;
+        let result;
+        if (form === "VietNam" && to === "USD") {
+            result = parseFloat(amount / exchangeRate);
+            alert("$" + result.toFixed(2));
+        } else if (form === "USD" && to === "VietNam") {
+            result = amount * exchangeRate;
+            alert(result + "vnd");
+        }
+    }
+
+
+</script>
+</body>
+</html>
