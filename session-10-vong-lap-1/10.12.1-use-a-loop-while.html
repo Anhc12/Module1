@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use a loop while</title>
+</head>
+<body>
+<script>
+  // Chương trình nhận số, hiển thị và tính tổng
+  let total = 0;
+  let input;
+
+  console.log("Nhập các số, kết thúc với giá trị -1.");
+
+  while (true) {
+    // Nhận giá trị từ người dùng
+    input = prompt("Nhập một số (-1 để kết thúc):");
+
+    // Chuyển đổi giá trị nhập thành số
+    let number = parseFloat(input);
+
+    // Kiểm tra điều kiện dừng
+    if (number === -1) {
+      break;
+    }
+
+    // Kiểm tra giá trị nhập hợp lệ
+    if (!isNaN(number)) {
+      // Cộng vào tổng
+      total += number;
+
+      // Hiển thị số vừa nhập
+      alert(`Bạn đã nhập: ${number}`);
+    } else {
+      alert("Vui lòng nhập một số hợp lệ.");
+    }
+  }
+
+  // Hiển thị tổng các giá trị
+  alert(`Tổng các giá trị: ${total}`);
+
+</script>
+
+</body>
+</html>
