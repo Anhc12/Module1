@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<form style="padding-bottom: 10px;">
+    <input id="firstNum" type="number">
+    <input id="secondNum" type="number"><br>
+    <button id="addition" onclick="addNum(firstNum, secondNum)" type="button">Addition</button>
+    <button id="subtraction" onclick="subNum(firstNum, secondNum)" type="button">Subtraction</button>
+    <button id="multiplication" onclick="mulNum(firstNum, secondNum)" type="button">Multiplication</button>
+    <button id="division" onclick="divNum(firstNum, secondNum)" type="button">Division</button>
+</form>
+<h3>Result:</h3>
+<p id="result"></p>
+<script>
+    function getValue() {
+        let firstNum = parseFloat(document.getElementById('firstNum').value);
+        let secondNum = parseFloat(document.getElementById('secondNum').value);
+        return firstNum + secondNum;
+    }
+    let result ;
+
+    function addNum() {
+        let firstNum = parseFloat(document.getElementById('firstNum').value);
+        let secondNum = parseFloat(document.getElementById('secondNum').value);
+         result = firstNum + secondNum;
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function subNum() {
+        let firstNum = parseFloat(document.getElementById('firstNum').value);
+
+        let secondNum = parseFloat(document.getElementById('secondNum').value);
+         result = firstNum - secondNum;
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function mulNum() {
+        let firstNum = parseFloat(document.getElementById('firstNum').value);
+
+        let secondNum = parseFloat(document.getElementById('secondNum').value);
+         result = firstNum * secondNum;
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function divNum() {
+        let firstNum = parseFloat(document.getElementById('firstNum').value);
+
+        let secondNum = parseFloat(document.getElementById('secondNum').value);
+        if (secondNum !== 0) {
+
+            result = firstNum / secondNum;
+            document.getElementById('result').innerHTML = result;
+        } else {
+            alert('Cannot divide by zero!');
+        }
+    }
+</script>
+</body>
+
+</html>
