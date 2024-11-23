@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<script>
+    let userName = prompt('Please enter your User name');
+    if (userName === 'Admin') {
+        let password = prompt('Please enter your password');
+        if (password === 'TheMaster') {
+            alert('Welcome!');
+        } else if (password == null) {
+            alert('Canceled');
+        } else {
+            alert('Wrong Password');
+        }
+    } else if (userName == null) {
+        alert('Canceled!');
+    } else {
+        alert("I don't know you");
+    }
+</script>
+</body>
+</html>
