@@ -43,7 +43,7 @@ function addProduct() {
 
 // Hàm chỉnh sửa tên sản phẩm
 function editProduct(index) {
-    const newName = prompt("Enter new product name:", products[index]);
+    const newName = prompt("Nhập tên sản phẩm mới:", products[index]);
 
     if (newName !== null && newName.trim() !== "") {
         products[index] = newName.trim();
@@ -53,7 +53,7 @@ function editProduct(index) {
 
 // Hàm xóa sản phẩm
 function deleteProduct(index) {
-    if (confirm("Are you sure you want to delete this product?")) {
+    if (confirm("Bạn có muốn xóa sản phẩm này không?")) {
         products.splice(index, 1);
         displayProducts();
     }
