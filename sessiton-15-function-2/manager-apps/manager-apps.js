@@ -29,7 +29,7 @@ function displayProducts() {
 // Hàm thêm mới sản phẩm
 function addProduct() {
     const newProductInput = document.getElementById("newProduct");
-    const newProductName = newProductInput.value;
+    const newProductName = newProductInput.value.trim();
 
     if (newProductName === "") {
         alert("Please enter a product name.");
@@ -45,7 +45,7 @@ function addProduct() {
 function editProduct(index) {
     const newName = prompt("Nhập tên sản phẩm mới:", products[index]);
 
-    if (newName !== null && newName.trim() !== "") {
+    if ( newName.trim() !== "") {
         products[index] = newName.trim();
         displayProducts();
     }

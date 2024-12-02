@@ -72,7 +72,7 @@ button {
 }
 
 button.edit {
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
 }
 
@@ -81,7 +81,7 @@ button.edit:hover {
 }
 
 button.delete {
-    background-color: #dc3545;
+    background-color: #28a745;
     color: white;
 }
 
