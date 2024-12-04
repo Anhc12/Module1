@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find element</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+    let value = parseFloat(prompt("Nhập số cần tìm:"));
+    let found = false; // Biến cờ
+
+    for (let i = 0; i < arr.length; i++) {
+        if (value === arr[i]) {
+            alert(`Vị trí của phần tử ${value} là ${i}`);
+            found = true; // Đánh dấu là đã tìm thấy
+            break;        // Dừng vòng lặp vì đã tìm thấy
+        }
+    }
+
+    if (!found) {
+        alert(`Mảng không có phần tử ${value}`);
+    }
+</script>
+</body>
+</html>
