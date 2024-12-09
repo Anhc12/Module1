@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* tag selector */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+<div id="total"></div>
+<div id="result"></div>
+<script>
+    class Products {
+        constructor(code, nameProduct, primeProduct, amount) {
+            this.code = code;
+            this.nameProduct = nameProduct;
+            this.primeProduct = primeProduct;
+            this.amount = amount;
+        }
+    }
+    let productList = [];
+    productList.push(new Products('SP001', 'Mac Mini M4', '13500000', '99'));
+    productList.push(new Products('SP002', 'Mac Mini M4', '13500000', '99'));
+    productList.push(new Products('SP003', 'Mac Mini M4', '13500000', '99'));
+
+
+    const result = document.getElementById("result");
+    document.getElementById("total").innerHTML = `<p>Tổng số sản phẩm: ${productList.length}</p>`;
+    let table = '<table><tr><th>Mã sản phẩm</th><th>Tên sản phẩm</th><th>Giá sản phẩm</th><th>Số lượng</th></tr>';
+    for (let i = 0; i < productList.length; i++) {
+        table += `<tr>
+            <td>${productList[i].code}</td>
+            <td>${productList[i].nameProduct}</td>
+            <td>${productList[i].primeProduct}</td>
+            <td>${productList[i].amount}</td>
+        </tr>`;
+    }
+    table += '</table>';
+    result.innerHTML = table;
+</script>
+</body>
+</html>
