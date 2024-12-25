@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 5</title>
+</head>
+<body>
+<script>
+  const testScore = Number(prompt("Nhập điểm bài kiểm tra:"));
+  const midTerm = Number(prompt("Nhập điểm thi giữa kỳ:"));
+  const finalExam = Number(prompt("Nhập điểm thi cuối kỳ:"));
+
+  const average = (testScore * 0.3) + (midTerm * 0.3) + (finalExam * 0.4);
+
+  if (average >= 8.5) {
+    alert("Học sinh đạt học lực: Giỏi");
+  } else if (average >= 7) {
+    alert("Học sinh đạt học lực: Khá");
+  } else if (average >= 5) {
+    alert("Học sinh đạt học lực: Trung bình");
+  } else {
+    alert("Học sinh đạt học lực: Yếu");
+  }
+
+</script>
+</body>
+</html>

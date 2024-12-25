@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Câu 7</title>
+</head>
+<body>
+<script>
+  const minutes = Number(prompt("Nhập số phút sử dụng:"));
+
+  let cost;
+
+  if (minutes <= 100) {
+    cost = minutes * 600;
+  } else if (minutes <= 150) {
+    cost = (100 * 600) + ((minutes - 100) * 400);
+  } else {
+    cost = (100 * 600) + (50 * 400) + ((minutes - 150) * 200);
+  }
+
+  alert(`Cước điện thoại là: ${cost.toLocaleString()} VND`);
+
+</script>
+</body>
+</html>
