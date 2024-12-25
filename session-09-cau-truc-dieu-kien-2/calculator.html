@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+<input type="text" id="view"><br><br>
+<table>
+    <tr>
+        <td><button onclick="addToInput(1)">1</button></td>
+        <td><button onclick="addToInput(2)">2</button></td>
+        <td><button onclick="addToInput(3)">3</button></td>
+        <td><button onclick="addToInput('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addToInput(4)">4</button></td>
+        <td><button onclick="addToInput(5)">5</button></td>
+        <td><button onclick="addToInput(6)">6</button></td>
+        <td><button onclick="addToInput('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addToInput(7)">7</button></td>
+        <td><button onclick="addToInput(8)">8</button></td>
+        <td><button onclick="addToInput(9)">9</button></td>
+        <td><button onclick="addToInput('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="document.getElementById('view').value = ''; previousValue = ''">AC</button></td>
+        <td><button onclick="addToInput(0)">0</button></td>
+        <td><button onclick="calculator()">=</button></td>
+        <td><button onclick="addToInput('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    let firstValue = '';
+    let secondValue = '';
+    let operator = '';
+    function addToInput(value) {
+        if (value === '+' || value === '-' || value === '*' || value === '/') {
+            if (firstValue !== '') operator = value;
+        } else {
+            if (operator === '') {
+                firstValue = firstValue + value;
+            } else {
+                secondValue = secondValue + value;
+            }
+        }
+        document.getElementById('view').value = firstValue + operator + secondValue;
+    }
+
+    function calculator() {
+        let result;
+        switch (operator) {
+            case '+':
+                result = parseInt(firstValue) + parseInt(secondValue);
+                break;
+            case '-':
+                result = parseInt(firstValue) - parseInt(secondValue);
+                break;
+            case '*':
+                result = parseInt(firstValue) * parseInt(secondValue);
+                break;
+            case '/':
+                result = parseInt(firstValue) / parseInt(secondValue);
+                break;
+        }
+        firstValue = secondValue = operator = '';
+        document.getElementById('view').value = result;
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff1493;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<h1>Do You Love Me?</h1>
+<button id="yes">YES</button>
+<button id="no">NO</button>
+
+<script>
+    // Xử lý khi click vào nút YES
+    document.getElementById("yes").onclick = function () {
+        alert("<3I");
+    };
+
+    // Xử lý khi di chuột lên nút NO
+    document.getElementById("no").onmouseover = function () {
+        const noButton = document.getElementById("no");
+        const maxX = window.innerWidth - noButton.offsetWidth;
+        const maxY = window.innerHeight - noButton.offsetHeight;
+
+        // Tạo vị trí ngẫu nhiên mới
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        // Cập nhật vị trí của nút NO
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    };
+</script>
+</body>
+</html>

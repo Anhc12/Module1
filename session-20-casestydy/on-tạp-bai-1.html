@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function inputArray() {
+        const n = parseInt(prompt("Nhập độ dài của mảng"));
+        if (isNaN(n) || n <= 0 || n > 20) { // Sửa điều kiện: n <= 0
+            alert("Số lượng phần tử không hợp lệ");
+            return []; // Trả về mảng rỗng nếu nhập sai
+        }
+        const arr = [];
+        for (let i = 0; i < n; i++) {
+            const element = Number(prompt(`Nhập phần tử thứ ${i + 1}`));
+            arr.push(element);
+        }
+        return arr;
+    }
+
+    function arrayIncreasing(arr) {
+        if (arr.length < 2) {
+            alert("Mảng phải có ít nhất 2 phần tử!");
+            return;
+        }
+
+        const diff = arr[1] - arr[0]; // Hiệu giữa hai phần tử đầu tiên
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] !== diff) {
+                alert("NO");
+                return;
+            }
+        }
+        alert("Ok");
+    }
+
+    // Sử dụng
+    const arr = inputArray();
+    if (arr.length > 0) { // Kiểm tra nếu mảng không rỗng
+        arrayIncreasing(arr);
+    }
+    document.write(arr);
+</script>
+</body>
+</html>
